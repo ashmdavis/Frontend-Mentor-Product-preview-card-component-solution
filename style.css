@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+.product-card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.7rem;
+    overflow: hidden;
+    display: grid;
+    max-width: 380px;
+}
+
+.content {
+    margin: 2rem;
+    display: grid;
+    gap: 20px;
+}
+
+.product-name, .price-label-discount {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.product-category {
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.product-name {
+    color: hsl(212, 21%, 14%);
+    line-height: 2.3rem;
+}
+
+.product-description {
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.price-label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.price-label-discount {
+    color: hsl(158, 36%, 37%);
+}
+
+.price-label-original {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.cart-button {
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    font-size: 0.925rem;
+    font-weight: 600;
+    padding: .95em 1.5em;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-button:hover {
+    background-color: hsl(158, 42%, 18%);
+    cursor: pointer;
+}
+
+.cart-button::before {
+    content:"";
+    background-image: url(images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+}
+
+picture, img {
+    display: block;
+    max-width: 100%;
+}
+
+@media (min-width:600px){
+    .product-card {
+        grid-template-columns: 1fr 1fr;
+        max-width: 600px;
+    }
+}
